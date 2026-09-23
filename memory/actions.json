@@ -1,0 +1,44 @@
+`[
+  {
+    "task": "test run",
+    "score": 1,
+    "actions": [
+      {
+        "tool": "write_file",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "task": "create a folder name ace and inside that create a py file wchich prints hello user",
+    "score": 1,
+    "actions": [
+      {
+        "tool": "create_folder",
+        "args": {
+          "folder_name": "ace"
+        }
+      },
+      {
+        "tool": "write_file",
+        "args": {
+          "filename": "ace/hello_user.py",
+          "content": "print('Hello User')"
+        }
+      }
+    ]
+  },
+  {
+    "task": "delete the hello user file",
+    "score": -1,
+    "actions": [
+      {
+        "tool": "write_file",
+        "args": {
+          "filename": "hello_user_file",
+          "content": ""
+        }
+      }
+    ]
+  }
+]

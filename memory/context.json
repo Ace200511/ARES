@@ -1,0 +1,9 @@
+{
+  "agent_name": "ARES",
+  "runtime": "Offline Edge (Localhost)",
+  "sandbox_path": "./sandbox",
+  "user_preferences": {
+    "auto_syntax_check": true,
+    "max_execution_timeout_sec": 30
+  }
+}

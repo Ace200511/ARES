@@ -1,0 +1,1 @@
+print('Classes are a fundamental aspect of object-oriented programming.')
