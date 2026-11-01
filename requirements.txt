@@ -1,0 +1,10 @@
+fastapi
+numpy
+psutil
+requests
+send2trash
+uvicorn[standard]
+pyautogui
+pywinauto; platform_system == "Windows"
+screen-brightness-control; platform_system == "Windows"
+pycaw; platform_system == "Windows"
