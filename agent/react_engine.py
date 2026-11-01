@@ -1,11 +1,3 @@
-"""
-Module G: 16-step Autonomous ReAct Engine with:
-  1. Primary Orchestrator: qwen2.5-coder:1.5b (keep_alive="5m")
-  2. Self-Correction Escalation: qwen2.5-coder:3b (triggered on exit_code != 0 or stderr)
-  3. Cyclical Loop / Deep Planning Recovery: deepseek-r1:1.5b
-  4. Rolling Context Compactor: qwen2.5:0.5b (triggered when tokens > 3,500)
-"""
-
 import json
 import logging
 import re
@@ -35,10 +27,6 @@ logger = logging.getLogger("ares.agent.react_engine")
 
 
 class ReActEngine:
-    """
-    Executes the 16-step ReAct loop while coordinating dynamic single-model VRAM swapping.
-    """
-
     ACTION_JSON_PATTERN = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
     CODE_BLOCK_PATTERN = re.compile(r"```(?:python)?\s*(.*?)\s*```", re.DOTALL)
 

@@ -1,8 +1,3 @@
-"""
-Zero-leak Ollama model switcher and deterministic ChatML client.
-Enforces strict single-model GPU VRAM residency via explicit keep_alive=0 eviction.
-"""
-
 import logging
 import re
 import time
